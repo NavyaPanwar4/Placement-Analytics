@@ -1,19 +1,19 @@
-pandas==2.2.2
-numpy==1.26.4
+pandas
+numpy
 
 # Visualization
-matplotlib==3.9.0
-seaborn==0.13.2
-plotly==5.22.0
-statsmodels==0.14.6
+matplotlib
+seaborn
+plotly
+statsmodels
 
 # Machine Learning
-scikit-learn==1.5.0
-joblib==1.4.2
+scikit-learn
+joblib
 
 # Streamlit app
-streamlit==1.35.0
+streamlit
 
 # Notebook
-jupyter==1.0.0
-ipykernel==6.29.4
+jupyter
+ipykernel
