@@ -1,0 +1,56 @@
+{
+  "best_model": "SVM",
+  "accuracy": 0.8837,
+  "roc_auc": 0.9051,
+  "cv_accuracy": 0.8698,
+  "features": [
+    "gender",
+    "ssc_p",
+    "ssc_b",
+    "hsc_p",
+    "hsc_b",
+    "hsc_s",
+    "degree_p",
+    "degree_t",
+    "workex",
+    "etest_p",
+    "specialisation",
+    "mba_p"
+  ],
+  "cat_mappings": {
+    "gender": [
+      "F",
+      "M"
+    ],
+    "ssc_b": [
+      "Central",
+      "Others"
+    ],
+    "hsc_b": [
+      "Central",
+      "Others"
+    ],
+    "hsc_s": [
+      "Arts",
+      "Commerce",
+      "Science"
+    ],
+    "degree_t": [
+      "Comm&Mgmt",
+      "Others",
+      "Sci&Tech"
+    ],
+    "workex": [
+      "No",
+      "Yes"
+    ],
+    "specialisation": [
+      "Mkt&Fin",
+      "Mkt&HR"
+    ]
+  },
+  "target": "status",
+  "train_size": 172,
+  "test_size": 43,
+  "dataset": "Campus Recruitment \u2014 benroshan (Kaggle)"
+}
