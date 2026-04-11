@@ -124,7 +124,7 @@ UNPLACED_COLOR = "#E07B7B"
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("## 🎓 Placement Analytics")
-    st.markdown("**MAIT — Campus Recruitment System**")
+    st.markdown("**Campus Recruitment System**")
     st.markdown("---")
     page = st.radio(
         "Navigate",
