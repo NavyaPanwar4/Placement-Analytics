@@ -18,23 +18,20 @@ st.set_page_config(
 # ── Custom CSS ────────────────────────────────────────────────────────────────
 st.markdown("""
 <style>
-            
     /* Hide the sidebar header (app text) */
     [data-testid="stSidebarNav"] {
         display: none;
     }
             
-    /* Global text */
-    html, body, [class*="css"]  {
-        color: #EAEAEA;
-        background-color: #0E1117;
-    }
+    /* REMOVED: Global html/body background and text color.
+       Let Streamlit's native theme handle the base colors! 
+    */
 
     /* Section titles */
     .section-title {
         font-size: 20px;
         font-weight: 600;
-        color: #FFFFFF;   /* FIXED: bright text */
+        color: var(--text-color); /* Automatically switches black/white */
         margin: 1.5rem 0 0.8rem;
         border-left: 4px solid #00C2A8;
         padding-left: 10px;
@@ -42,51 +39,53 @@ st.markdown("""
 
     /* Metric cards */
     .metric-card {
-        background: #1A1F2B;
+        background: var(--secondary-background-color); /* Adapts to theme */
         border-radius: 12px;
         padding: 1.2rem 1.5rem;
-        border: 1px solid #2A2F3A;
+        border: 1px solid rgba(128, 128, 128, 0.2); /* Soft border for both themes */
         text-align: center;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     .metric-label { 
         font-size: 13px; 
-        color: #A0A7B5; 
+        color: var(--text-color); 
+        opacity: 0.7; /* Uses opacity to create a grey effect that works anywhere */
         margin-bottom: 4px; 
     }
 
     .metric-value { 
         font-size: 28px; 
         font-weight: 600; 
-        color: #FFFFFF; 
+        color: var(--text-color); 
     }
 
     .metric-sub { 
         font-size: 12px; 
-        color: #8892A6; 
+        color: var(--text-color); 
+        opacity: 0.5;
         margin-top: 2px; 
     }
 
-    /* Prediction boxes */
+    /* Prediction boxes - using rgba for background so they tint based on the theme */
     .predict-box {
-        background: #132A26;
+        background: rgba(0, 194, 168, 0.1); /* 10% opacity of the border color */
         border: 1px solid #00C2A8;
         border-radius: 12px;
         padding: 1.5rem;
         text-align: center;
         margin-top: 1rem;
-        color: #EAEAEA;
+        color: var(--text-color);
     }
 
     .predict-box-red {
-        background: #2A1A1A;
+        background: rgba(255, 107, 107, 0.1);
         border: 1px solid #FF6B6B;
         border-radius: 12px;
         padding: 1.5rem;
         text-align: center;
         margin-top: 1rem;
-        color: #EAEAEA;
+        color: var(--text-color);
     }
 
 </style>
